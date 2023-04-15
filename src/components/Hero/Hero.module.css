@@ -1,0 +1,17 @@
+.hero {
+    background-color: var(--background);
+}
+
+#row {
+    padding: 3rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+Button {
+    margin-top: 1rem;
+}
+
+.images {
+    width: 100%;
+}

@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <h1>Hasan</h1>
       <h2>Initial Develop</h2>
+      <h2>Initial Feature</h2>
       <button type="button" class="btn btn-primary">Primary</button>
     </div>
   )

@@ -10,6 +10,7 @@ import './App.css'
 import About from './components/About/About'
 import Service from './components/Service/Service'
 import MyPortfolio from './components/MyPortfolio/MyPortfolio'
+import Testimoni from './components/Testimoni/Testimoni'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <About/>
         <Service/>
         <MyPortfolio/>
+        <Testimoni/>
       </div>
   )
 }

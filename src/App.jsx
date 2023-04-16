@@ -8,6 +8,7 @@ import logo from './assets/images/logo.png'
 import Hero from './components/Hero/Hero'
 import './App.css'
 import About from './components/About/About'
+import Service from './components/Service/Service'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Navbar/>
         <Hero/>
         <About/>
+        <Service/>
       </div>
   )
 }

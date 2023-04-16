@@ -13,6 +13,7 @@ import MyPortfolio from './components/MyPortfolio/MyPortfolio'
 import Testimoni from './components/Testimoni/Testimoni'
 import Contact from './components/Contact/Contact'
 import Blog from './components/Blog/Blog'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Testimoni/>
         <Contact/>
         <Blog/>
+        <Footer/>
       </div>
   )
 }

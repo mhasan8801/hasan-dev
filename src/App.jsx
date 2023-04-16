@@ -9,6 +9,7 @@ import Hero from './components/Hero/Hero'
 import './App.css'
 import About from './components/About/About'
 import Service from './components/Service/Service'
+import MyPortfolio from './components/MyPortfolio/MyPortfolio'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Hero/>
         <About/>
         <Service/>
+        <MyPortfolio/>
       </div>
   )
 }

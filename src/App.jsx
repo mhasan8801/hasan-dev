@@ -12,6 +12,7 @@ import Service from './components/Service/Service'
 import MyPortfolio from './components/MyPortfolio/MyPortfolio'
 import Testimoni from './components/Testimoni/Testimoni'
 import Contact from './components/Contact/Contact'
+import Blog from './components/Blog/Blog'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <MyPortfolio/>
         <Testimoni/>
         <Contact/>
+        <Blog/>
       </div>
   )
 }

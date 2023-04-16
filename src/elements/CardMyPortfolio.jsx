@@ -7,6 +7,7 @@ const CardMyPortfolio = ({ img, title, description, linkDemo, linkGithub }) => {
     <div className="card shadow" style={{ border: "none", margin:'1rem 0' }}>
       <img src={img} className="card-img-top" alt={title} />
       <div className="card-body">
+        
         <Title $h3 className="card-title">
           {title}
         </Title>

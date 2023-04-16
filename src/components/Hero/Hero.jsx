@@ -1,5 +1,4 @@
 import Button from "../../elements/Button";
-import Color from "../../elements/Color";
 import Paragraph from "../../elements/Paragraph";
 import Title from "../../elements/Title";
 import HasanHero from "../../assets/images/hasan-hero.png"

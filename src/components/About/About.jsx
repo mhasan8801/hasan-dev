@@ -8,7 +8,7 @@ import Button from "../../elements/Button";
 
 const About = () => {
   return (
-    <div className="about">
+    <div className={styles.about}>
       <div className="container">
         <div className="row" id={styles.row}>
           <div className="col-sm-6" id={styles.colleft}>

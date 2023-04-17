@@ -4,7 +4,7 @@ import Paragraph from "../../elements/Paragraph";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light shadow">
+    <nav className="navbar navbar-expand- navbar-light bg-light shadow">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <Logo></Logo>

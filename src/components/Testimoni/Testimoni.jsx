@@ -2,6 +2,7 @@ import Title from "../../elements/Title";
 import Button from "../../elements/Button";
 import styles from "./Testimoni.module.css";
 import CardTestimoni from "../../elements/CardTestimoni";
+import TextColor from "../../elements/TextColor";
 
 const Testimoni = () => {
   return (
@@ -9,7 +10,7 @@ const Testimoni = () => {
       <div className="container">
         <div className={styles.title}>
           <div className="row">
-            <Title $h3>Ulasan Pelanggan</Title>
+            <Title $h3>Ulasan <TextColor>Pelanggan</TextColor> </Title>
             <Title $h2>Testimoni Pelanggan</Title>
           </div>
           <div className="row">

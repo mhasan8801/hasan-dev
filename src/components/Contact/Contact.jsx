@@ -23,7 +23,7 @@ const Contact = () => {
               <div className="col-1">
                 <img src={Email} alt="Email" />
               </div>
-              <div className="col-11">
+              <div className="col-11 ps-3">
                 <Paragraph $p3>hasanmuhammad197@gmail.com</Paragraph>
               </div>
             </div>
@@ -31,7 +31,7 @@ const Contact = () => {
               <div className="col-1">
                 <img src={Address} alt="Address" />
               </div>
-              <div className="col-11">
+              <div className="col-11 ps-3">
                 <Paragraph $p3>
                   Dusun Ky. Hasan Kerpangan Leces Probolinggo
                 </Paragraph>
@@ -41,7 +41,7 @@ const Contact = () => {
               <div className="col-1">
                 <img src={Phone} alt="Phone" />
               </div>
-              <div className="col-11">
+              <div className="col-11 ps-3">
                 <Paragraph $p3>+62 8223 2139 882</Paragraph>
               </div>
             </div>
@@ -52,7 +52,7 @@ const Contact = () => {
               <Input type="email" placeholder="Email*" />
               <Input type="text" placeholder="Pekerjaan*" />
               <textarea
-                class="form-control"
+                className="form-control"
                 placeholder="Pesan*"
                 id="floatingTextarea"
                 style={{height:'10rem'}}

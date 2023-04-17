@@ -5,7 +5,7 @@ const CardService = ({ img, title, description, linkMore }) => {
   return (
     <div
       className="card shadow"
-      style={{ backgroundColor: "transparent", border: "none",padding:'2rem 1rem' }}
+      style={{ backgroundColor: "transparent", border: "none",padding:'2rem 1rem', margin:'1rem 0' }}
     >
       <img
         src={img}
@@ -25,7 +25,7 @@ const CardService = ({ img, title, description, linkMore }) => {
           {description}
         </Paragraph>{" "}
         <br />
-        <a href={linkMore} class="card-link" style={{ textDecoration: "none" }}>
+        <a href={linkMore} className="card-link" style={{ textDecoration: "none" }}>
           Baca Selengkapnya
         </a>
       </div>

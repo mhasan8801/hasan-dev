@@ -10,7 +10,7 @@ const Hero = () => {
         <div className={styles.hero}>
             <div className="container">
             <div className="row" id={styles.row}>
-                <div className="col-sm-6">
+                <div className="col-sm-6" id={styles.col6}>
                     <Title $h3>Selamat 
                         <TextColor> Datang</TextColor> 
                     </Title>
@@ -24,7 +24,7 @@ const Hero = () => {
                     <Paragraph $p2>Saya menekuni dunia teknologi dan berbasis di Probolinggo. Saya menempatkan dedikasi penuh pada pekerjaan yang saya lakukan.</Paragraph> <br />
                     <Button $primary>Hire Me</Button>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6"  id={styles.col6}>
                     <img src={HasanHero} alt="Hasan" className={styles.images}/>
                 </div>
             </div>

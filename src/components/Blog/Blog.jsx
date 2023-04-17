@@ -1,7 +1,5 @@
 import styles from "./Blog.module.css";
 import Title from "../../elements/Title.jsx";
-import Paragraph from "../../elements/Paragraph";
-import CardService from "../../elements/CardService";
 import ImageBlog from "../../assets/images/blog.png";
 import CardBlog from "../../elements/CardBlog";
 

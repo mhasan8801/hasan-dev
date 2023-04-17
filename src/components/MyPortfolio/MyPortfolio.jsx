@@ -11,8 +11,10 @@ const MyPortfolio = () => {
                 <div className={styles.title}>
                     <div className="row">
                         <div className="col-md-6 text-start">
-                            <Title $h3>Project Terakhir</Title>
-                            <Title $h2>Portofolio Saya</Title>
+                            <div>
+                                <Title $h3>Project Terakhir</Title>
+                                <Title $h2>Portofolio Saya</Title>
+                            </div>
                         </div>
                         <div className="col-md-6">
                             <Button $primary className="float-end">Semua Project</Button>

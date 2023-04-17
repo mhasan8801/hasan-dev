@@ -5,6 +5,7 @@ import CardService from "../../elements/CardService";
 import WebDesign from "../../assets/icons/web-design.png";
 import MobileApp from "../../assets/icons/mobile-app.png";
 import SEO from "../../assets/icons/seo.png";
+import TextColor from "../../elements/TextColor";
 
 const Service = () => {
   return (
@@ -12,10 +13,10 @@ const Service = () => {
       <div className="container">
         <div className={styles.title}>
             <Title $h2>Layanan</Title>
-            <Title $h3>Jasa yang Saya Berikan</Title>
+            <Title $h3><TextColor>Jasa</TextColor> yang Saya Berikan</Title>
         </div>
         <div className="row" id={styles.row}>
-            <div className="col">
+            <div className="col-sm-4">
                 <CardService
                 img={WebDesign}
                 title="Web Design"
@@ -23,7 +24,7 @@ const Service = () => {
                 linkMore="#"
                 />
             </div>
-            <div className="col">
+            <div className="col-sm-4">
             <CardService
                 img={MobileApp}
                 title="Mobile App Design"
@@ -31,10 +32,10 @@ const Service = () => {
                 linkMore="#"
                 />
             </div>
-            <div className="col">
+            <div className="col-sm-4">
             <CardService
                 img={SEO}
-                title="SEO Optimization"
+                title="Search Engine Optimization"
                 description="Membantu anda meningkatkan visibilitas website di mesin pencari agar lebih mudah ditemukan oleh calon pelanggan dan klien potensial."
                 linkMore="#"
                 />

@@ -1,11 +1,10 @@
 .service {
-    background-color: var(--background);
     padding: 3rem 0;
 }
 
 .title {
     text-align: center;
-    padding: 3rem 0rem;
+    padding: 2rem 0rem;
 }
 
 .row {

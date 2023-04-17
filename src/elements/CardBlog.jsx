@@ -26,7 +26,7 @@ const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
           {artikel}
         </Paragraph>{" "}
         <br />
-        <a href={linkMore} class="card-link" style={{ textDecoration: "none" }}>
+        <a href={linkMore} className="card-link" style={{ textDecoration: "none" }}>
           Baca Selengkapnya
         </a>
       </div>

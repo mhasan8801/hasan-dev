@@ -25,7 +25,7 @@ const CardService = ({ img, title, description, linkMore }) => {
           {description}
         </Paragraph>{" "}
         <br />
-        <a href={linkMore} class="card-link" style={{ textDecoration: "none" }}>
+        <a href={linkMore} className="card-link" style={{ textDecoration: "none" }}>
           Baca Selengkapnya
         </a>
       </div>

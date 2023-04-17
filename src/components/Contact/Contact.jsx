@@ -52,7 +52,7 @@ const Contact = () => {
               <Input type="email" placeholder="Email*" />
               <Input type="text" placeholder="Pekerjaan*" />
               <textarea
-                class="form-control"
+                className="form-control"
                 placeholder="Pesan*"
                 id="floatingTextarea"
                 style={{height:'10rem'}}

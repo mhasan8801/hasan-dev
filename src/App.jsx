@@ -1,34 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'typeface-roboto'
-import Button from './elements/Button'
-import Title from './elements/Title'
-import Paragraph from './elements/Paragraph'
-import Navbar from './components/Navbar'
-import logo from './assets/images/logo.png'
-import Hero from './components/Hero/Hero'
 import './App.css'
-import About from './components/About/About'
-import Service from './components/Service/Service'
-import MyPortfolio from './components/MyPortfolio/MyPortfolio'
-import Testimoni from './components/Testimoni/Testimoni'
-import Contact from './components/Contact/Contact'
-import Blog from './components/Blog/Blog'
-import Footer from './components/Footer/Footer'
+import Landingpage from './pages/Landingpage'
 
 function App() {
 
   return (
-      <div>
-        <Navbar/>
-        <Hero/>
-        <About/>
-        <Service/>
-        <MyPortfolio/>
-        <Testimoni/>
-        <Contact/>
-        <Blog/>
-        <Footer/>
-      </div>
+      <>
+        <Landingpage/>
+      </>
   )
 }
 

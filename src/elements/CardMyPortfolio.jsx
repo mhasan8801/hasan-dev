@@ -17,7 +17,7 @@ const CardMyPortfolio = ({ img, title, description, linkDemo, linkGithub }) => {
         <br />
         <a
           href={linkDemo}
-          class="card-link text-start"
+          className="card-link text-start"
           style={{ textDecoration: "none" }}
         >
           {" "}
@@ -25,7 +25,7 @@ const CardMyPortfolio = ({ img, title, description, linkDemo, linkGithub }) => {
         </a>
         <a
           href={linkGithub}
-          class="card-link float-end"
+          className="card-link float-end"
           style={{ textDecoration: "none" }}
         >
           <TextColor $light>Lihat di Github</TextColor>

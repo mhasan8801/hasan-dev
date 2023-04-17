@@ -2,11 +2,11 @@ import Title from "../../elements/Title";
 import Button from "../../elements/Button"
 import CardMyPortfolio from "../../elements/CardMyPortfolio";
 import ImgPortfolio from "../../assets/images/Portfolio.png"
-import styles from "./MyPortfolio.module.css";
+import styles from "./Portfolio.module.css";
 
-const MyPortfolio = () => {
+const Portfolio = () => {
     return(
-        <div className={styles.myportfolio}>
+        <div className={styles.portfolio}>
             <div className="container">
                 <div className={styles.title}>
                     <div className="row">
@@ -55,4 +55,4 @@ const MyPortfolio = () => {
     )
 }
 
-export default MyPortfolio;
+export default Portfolio;

@@ -3,7 +3,7 @@ import Blog from "../components/Blog/Blog";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
-import MyPortfolio from "../components/MyPortfolio/MyPortfolio";
+import Portfolio from "../components/Portfolio/Portfolio";
 import Navbar from "../components/Navbar/Navbar";
 import Service from "../components/Service/Service";
 import Testimoni from "../components/Testimoni/Testimoni";
@@ -16,7 +16,7 @@ const Landingpage = () => {
             <Hero/>
             <About/>
             <Service/>
-            <MyPortfolio/>
+            <Portfolio/>
             <Testimoni/>
             <Contact/>
             <Blog/>

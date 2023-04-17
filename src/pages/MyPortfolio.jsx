@@ -6,9 +6,9 @@ import Paragraph from "../elements/Paragraph";
 import CardMyPortfolio from "../elements/CardMyPortfolio";
 import TextColor from "../elements/TextColor";
 
-const Portfolio = () => {
+const MyPortfolio = () => {
   return (
-    <div className="portfolio">
+    <div className="myportfolio">
       <Navbar />
       <div className="container">
         <div className="header text-center pt-4">
@@ -120,4 +120,4 @@ const styles = {
     }
 }
 
-export default Portfolio;
+export default MyPortfolio;

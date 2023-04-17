@@ -11,9 +11,10 @@ const Footer = () => {
             <div className="container text-center">
                 <Logo/>
                 <div className="row">
-                    <div className="col">
+                    <div className={styles.col}>
                         <a href="#" id={styles.a}><Paragraph $p2>Home</Paragraph></a>
                         <a href="#" id={styles.a}><Paragraph $p2>Portfolio</Paragraph></a>
+                        <a href="#" id={styles.a}><Paragraph $p2>Curiculum Vitae</Paragraph></a>
                         <a href="#" id={styles.a}><Paragraph $p2>Blog</Paragraph></a>
                     </div>
                 </div>

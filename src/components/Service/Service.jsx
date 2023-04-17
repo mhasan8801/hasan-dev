@@ -35,7 +35,7 @@ const Service = () => {
             <div className="col-sm-4">
             <CardService
                 img={SEO}
-                title="SEO Optimization"
+                title="Search Engine Optimization"
                 description="Membantu anda meningkatkan visibilitas website di mesin pencari agar lebih mudah ditemukan oleh calon pelanggan dan klien potensial."
                 linkMore="#"
                 />

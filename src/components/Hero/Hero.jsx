@@ -7,7 +7,7 @@ import TextColor from "../../elements/TextColor";
 
 const Hero = () => {
     return(
-        <div className="hero">
+        <div className={styles.hero}>
             <div className="container">
             <div className="row" id={styles.row}>
                 <div className="col-sm-6" id={styles.col6}>

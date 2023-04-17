@@ -5,6 +5,7 @@ import styles from "./About.module.css";
 import Title from "../../elements/Title";
 import Paragraph from "../../elements/Paragraph";
 import Button from "../../elements/Button";
+import TextColor from "../../elements/TextColor";
 
 const About = () => {
   return (
@@ -14,7 +15,11 @@ const About = () => {
           <div className="col-sm-6" id={styles.colleft}>
             <div className="row row-cols-2">
               <div className="col-sm-7 row-cols-1">
-                <img src={HasanAbout} alt="Hasan About" className={styles.img} />
+                <img
+                  src={HasanAbout}
+                  alt="Hasan About"
+                  className={styles.img}
+                />
               </div>
               <div className="col-sm-5 row-cols-1">
                 <div className="row row-cols-1">
@@ -35,8 +40,14 @@ const About = () => {
             </div>
           </div>
           <div className="col-sm-6" id={styles.colright}>
-            <Title $h3>Tentang Saya</Title>
-            <Title $h2>Mewujudkan Website Yang Menarik dan Responsif</Title>
+            <Title $h3>
+              Tentang <TextColor>Saya</TextColor>
+            </Title>
+            <Title $h2>
+              Mewujudkan Website Yang{" "}
+              <TextColor $bold>Menarik</TextColor> dan{" "}
+              <TextColor $bold>Responsif</TextColor>
+            </Title>
             <Paragraph $p3>
               Saya terus mempelajari teknologi terbaru dan trend terkini dalam
               industri, dan mengaplikasikannya dalam setiap proyek yang saya
@@ -45,7 +56,8 @@ const About = () => {
               kesuksesan bisnis Anda. <br />
               Saya senang bekerja dengan klien yang memiliki visi yang jelas dan
               berkolaborasi dengan tim yang berorientasi pada hasil.
-            </Paragraph> <br />
+            </Paragraph>{" "}
+            <br />
             <Button $primary>Download CV</Button>
           </div>
         </div>

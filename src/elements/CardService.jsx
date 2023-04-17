@@ -5,7 +5,7 @@ const CardService = ({ img, title, description, linkMore }) => {
   return (
     <div
       className="card shadow"
-      style={{ backgroundColor: "transparent", border: "none",padding:'2rem 1rem' }}
+      style={{ backgroundColor: "transparent", border: "none",padding:'2rem 1rem', margin:'1rem 0' }}
     >
       <img
         src={img}

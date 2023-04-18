@@ -6,6 +6,7 @@ import MyPortfolio from './pages/MyPortfolio'
 import MyBlog from './pages/MyBlog'
 import CurciulumVitae from './pages/CuriculumVitae'
 import { Route, Routes } from 'react-router-dom'
+import AdminPanel from './pages/Admin'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path='portofolio' element={<MyPortfolio/>}/>
           <Route path='curiculumvitae' element={<CurciulumVitae/>}/>
           <Route path='blog' element={<MyBlog/>}/>
+          <Route path='admin' element={<AdminPanel/>}/>
         </Routes>
       </>
   )

@@ -9,7 +9,7 @@ import Phone from "../../assets/icons/phone.png";
 
 const Contact = () => {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="contact">
       <div className="container">
         <div className="row">
           <div className="col-md-6" id={styles.colleft}>

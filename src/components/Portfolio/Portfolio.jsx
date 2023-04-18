@@ -3,6 +3,7 @@ import Button from "../../elements/Button"
 import CardMyPortfolio from "../../elements/CardMyPortfolio";
 import ImgPortfolio from "../../assets/images/Portfolio.png"
 import styles from "./Portfolio.module.css";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
     return(
@@ -17,7 +18,9 @@ const Portfolio = () => {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <Button $primary className="float-end">Semua Project</Button>
+                            <Link to="/portofolio">
+                                <Button $primary className="float-end">Semua Project</Button>
+                            </Link>
                         </div>
                     </div>
                     <div className="row">

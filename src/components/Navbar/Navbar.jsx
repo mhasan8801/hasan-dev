@@ -1,13 +1,15 @@
 import Button from "../../elements/Button";
 import Logo from "../../elements/Logo";
 import Paragraph from "../../elements/Paragraph";
+import { Link, NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css"
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md shadow">
+    <nav className="navbar navbar-expand-md shadow" id={styles.navbar}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <Logo/>
+          <Logo />
         </a>
         <button
           className="navbar-toggler"
@@ -22,18 +24,26 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a className="nav-link ms-3 active" aria-current="page" href="#">
-              <Paragraph $textColor>Home</Paragraph>
-            </a>
-            <a className="nav-link ms-3" href="#">
-              <Paragraph $p2>Portofolio</Paragraph>
-            </a>
-            <a className="nav-link ms-3" href="#">
-            <Paragraph $p2>Curiculum Vitae</Paragraph>
-            </a>
-            <a className="nav-link ms-3" href="#">
-            <Paragraph $p2>Blog</Paragraph>
-            </a>
+        <li>
+          <NavLink exact to="/" activeClassName="active">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/portofolio" activeClassName="active">
+            Portofolio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/curiculumvitae" activeClassName="active">
+            Curiculum Vitae
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog" activeClassName="active">
+            Blog
+          </NavLink>
+        </li>
           </div>
         </div>
       </div>

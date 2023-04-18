@@ -6,6 +6,7 @@ import Title from "../../elements/Title";
 import Paragraph from "../../elements/Paragraph";
 import Button from "../../elements/Button";
 import TextColor from "../../elements/TextColor";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -58,7 +59,9 @@ const About = () => {
               berkolaborasi dengan tim yang berorientasi pada hasil.
             </Paragraph>{" "}
             <br />
-            <Button $primary>Download CV</Button>
+            <Link to="curiculumvitae">
+              <Button $primary>Download CV</Button>
+            </Link>
           </div>
         </div>
       </div>

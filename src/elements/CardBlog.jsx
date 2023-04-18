@@ -5,7 +5,7 @@ const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
   return (
     <div
       className="card shadow"
-      style={{ backgroundColor: "transparent", border: "none", borderRadius:'20px', padding:'1rem 0' }}
+      style={{ backgroundColor: "transparent", border: "none", borderRadius:'20px', margin:'1rem 0' }}
     >
       <img
         src={img}

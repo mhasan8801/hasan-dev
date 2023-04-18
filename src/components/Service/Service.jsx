@@ -6,8 +6,10 @@ import WebDesign from "../../assets/icons/web-design.png";
 import MobileApp from "../../assets/icons/mobile-app.png";
 import SEO from "../../assets/icons/seo.png";
 import TextColor from "../../elements/TextColor";
+import Popup from "reactjs-popup";
 
 const Service = () => {
+
   return (
     <div className={styles.service}>
       <div className="container">

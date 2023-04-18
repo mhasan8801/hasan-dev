@@ -22,7 +22,9 @@ const Hero = () => {
                     Developer
                     </Title>
                     <Paragraph $p2>Saya menekuni dunia teknologi dan berbasis di Probolinggo. Saya menempatkan dedikasi penuh pada pekerjaan yang saya lakukan.</Paragraph> <br />
-                    <Button $primary>Hire Me</Button>
+                    <a href="#contact">
+                        <Button $primary>Hire Me</Button>
+                    </a>
                 </div>
                 <div className="col-sm-6"  id={styles.col6}>
                     <img src={HasanHero} alt="Hasan" className={styles.images}/>

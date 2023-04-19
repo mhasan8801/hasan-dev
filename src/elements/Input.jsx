@@ -1,12 +1,21 @@
-const Input = ({type,placeholder}) => {
+import Paragraph from "./Paragraph";
+import Title from "./Title";
+
+const Input = ({type, label, id, placeholder}) => {
   return (
+    <>
+    <Paragraph>{label}</Paragraph>
     <input
       type={type}
+      name={label}
+      id={id ? id : ''}
+      placeholder={placeholder ? placeholder : ''}
+      style={{margin:'0.5rem 0'}}
       className="form-control"
-      id="exampleFormControlInput1"
-      placeholder={placeholder}
-      style={{margin:'1rem 0'}}
+      // value={value ? value : ''}
+      // onChange={onChangeText ? onChangeText : ''}
     />
+    </>
   );
 };
 

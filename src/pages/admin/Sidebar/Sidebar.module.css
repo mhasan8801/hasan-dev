@@ -1,0 +1,9 @@
+.item {
+    text-decoration: none;
+}
+
+#bg {
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 1rem 0 0.1rem 0;
+}

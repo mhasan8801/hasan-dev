@@ -11,7 +11,7 @@ const AdminPanel = () => {
       <div className="container-fluid bg-width min-vh-100">
         <div className="row">
           <div
-            className="col-2 vh-100"
+            className="col-2"
             style={{ backgroundColor: "var(--background)" }}
           >
             <Sidebar />

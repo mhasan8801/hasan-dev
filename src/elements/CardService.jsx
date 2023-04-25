@@ -31,7 +31,7 @@ const CardService = ({ img, title, description, linkMore, onClick }) => {
           style={{
             display: "-webkit-box",
             WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 2,
+            WebkitLineClamp: 3,
             overflow: "hidden",
             textOverflow: "ellipsis",
           }}

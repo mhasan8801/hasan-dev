@@ -1,4 +1,5 @@
 import Paragraph from "../../../elements/Paragraph";
+import TextColor from "../../../elements/TextColor";
 import Title from "../../../elements/Title";
 
 const Dashboard = () => {
@@ -9,7 +10,7 @@ const Dashboard = () => {
                     <div className="col-md-2">
                         <div className="p-3 bg-white shadow d-flex justify-content-around align-items-center rounded">
                             <div className="content text-center">
-                                <Title $h3>12</Title>
+                                <TextColor $h3>12</TextColor>
                                 <Title $h3>Portofolio</Title>
                             </div>
                         </div>

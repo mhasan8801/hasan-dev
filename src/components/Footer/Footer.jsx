@@ -12,18 +12,18 @@ const Footer = () => {
       <div className="container text-center">
         <Logo />
         <div className="row">
-          <div className={styles.col}>
+          <div className="{styles.col}">
             <Link to="/" id={styles.a}>
-              <Paragraph $p2>Home</Paragraph>
+              <span >Home</span>
             </Link>
             <Link to="/portofolio" id={styles.a}>
-              <Paragraph $p2>Portofolio</Paragraph>
+              <span >Portofolio</span>
             </Link>
             <Link to="/curiculumvitae" id={styles.a}>
-              <Paragraph $p2>Curiculum Vitae</Paragraph>
+              <span >Curiculum Vitae</span>
             </Link>
             <Link to="/blog" id={styles.a}>
-              <Paragraph $p2>Blog</Paragraph>
+              <span >Blog</span>
             </Link>
           </div>
         </div>

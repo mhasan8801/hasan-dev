@@ -13,8 +13,10 @@ const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
         alt={title}
       />
       <div className="card-body" style={{ padding: "1rem 0.5rem" }}>
+        <div>
         <Paragraph $p2 className="text-start">{kategory}</Paragraph>
         <Paragraph $p2 className="float-end">{tanggal}</Paragraph>
+        </div>
         <Title $h3 className="card-title">
           {title}
         </Title>

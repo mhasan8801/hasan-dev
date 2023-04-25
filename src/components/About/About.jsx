@@ -57,10 +57,9 @@ const About = () => {
               kesuksesan bisnis Anda. <br />
               Saya senang bekerja dengan klien yang memiliki visi yang jelas dan
               berkolaborasi dengan tim yang berorientasi pada hasil.
-            </Paragraph>{" "}
-            <br />
+            </Paragraph>{" "} <br />
             <Link to="curiculumvitae">
-              <Button $primary>Download CV</Button>
+              <Button $primary> Download CV</Button>
             </Link>
           </div>
         </div>

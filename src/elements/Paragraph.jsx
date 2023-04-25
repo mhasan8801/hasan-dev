@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 import Color from "./Color";
 
-const Paragraph = styled.p`
+const Paragraph = styled.text`
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;

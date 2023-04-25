@@ -2,14 +2,15 @@ import styles from "./Blog.module.css";
 import Title from "../../elements/Title.jsx";
 import ImageBlog from "../../assets/images/blog.png";
 import CardBlog from "../../elements/CardBlog";
+import TextColor from "../../elements/TextColor";
 
 const Blog = () => {
   return (
     <div className={styles.blog}>
       <div className="container">
         <div className={styles.title}>
-            <Title $h2>Blog dan Artikel</Title>
-            <Title $h3>Artikel Terakhir</Title>
+            <Title $h2><TextColor $bold>Blog</TextColor> dan Artikel</Title>
+            <Title $h3>Artikel <TextColor>Terakhir</TextColor></Title>
         </div>
         <div className="row" id={styles.row}>
             <div className="col-md-4">

@@ -11,7 +11,7 @@ const Testimoni = () => {
         <div className={styles.title}>
           <div className="row">
             <Title $h3>Ulasan <TextColor>Pelanggan</TextColor> </Title>
-            <Title $h2>Testimoni Pelanggan</Title>
+            <Title $h2><TextColor $bold>Testimoni</TextColor> Pelanggan</Title>
           </div>
           <div className="row">
             <div className="col-md-4">

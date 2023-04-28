@@ -9,14 +9,16 @@ import { useEffect, useState } from "react";
 import { CgSearchLoading } from "react-icons/cg";
 import TextColor from "../../../elements/TextColor";
 
-const getPortfolioList = gql`
+//query graphql 
+export const getPortfolioList = gql`
   query QueryPortfolio {
     portfolio {
       id
       title
+      img
       description
-      link_demo
-      link_github
+      linkDemo
+      linkGithub
     }
   }
 `;
@@ -67,10 +69,12 @@ const PortfolioAdmin = () => {
                       <tr key={item.id}>
                         <th scope="row">{item.id}</th>
                         <td>{item.title}</td>
-                        <td>Gambar</td>
+                        <td>
+                          <img src={item.img} alt="Link Image Firebase" />
+                        </td>
                         <td>{item.description}</td>
-                        <td>{item.link_demo}</td>
-                        <td>{item.link_github}</td>
+                        <td>{item.linkDemo}</td>
+                        <td>{item.linkGithub}</td>
                         <td>
                           <Link to="/admin/portofolio/edit">
                             <IconContext.Provider

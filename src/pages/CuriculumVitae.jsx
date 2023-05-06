@@ -2,16 +2,17 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Title from "../elements/Title";
 import TextColor from "../elements/TextColor";
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page, pdfjs } from "react-pdf/dist/esm/entry.vite";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 import English from "../assets/pdf/English.pdf";
 import LKMM from "../assets/pdf/LKMM.pdf";
 import FullColor from "../assets/pdf/FullColor.pdf";
 import AtsFriendly from "../assets/pdf/AtsFriendly.pdf";
 import { useState } from "react";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 const CuriculumVitae = () => {
-  
   const [selectedPdf, setSelectedPdf] = useState(LKMM);
 
   const pdfList = [
@@ -44,12 +45,10 @@ const CuriculumVitae = () => {
           </div>
         </div>
         <div className="content">
-          <div style={styles.div}>
-            <iframe src={selectedPdf} frameborder="0" style={styles.iframe}>
-              <Document file={selectedPdf}>
-                <Page pageNumber={1} />
-              </Document>
-            </iframe>
+          <div style={styles.frame}>
+            <Document file={selectedPdf}>
+              <Page pageNumber={1} />
+            </Document>
           </div>
         </div>
       </div>
@@ -64,18 +63,15 @@ const styles = {
     margin: "3rem 1rem",
   },
   col: {
-    padding: "5rem 0"
+    padding: "5rem 0",
   },
-  div: {
+  frame: {
+    padding: "1rem 0",
     textAlign: "center",
-    padding: "2rem 0"
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  iframe: {
-    padding: "3rem 20rem",
-    width: "50%",
-    height: "55rem",
-    backgroundColor: "var(--background)"
-  }
-}
+};
 
 export default CuriculumVitae;

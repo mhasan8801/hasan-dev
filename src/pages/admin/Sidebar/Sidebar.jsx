@@ -9,7 +9,9 @@ const Sidebar = () => {
     return(
         <div className="sidebar p-2">
             <div className="logo d-flex justify-content-center pt-4">
-                <Logo/>
+                <Link to="/">
+                    <Logo/>
+                </Link>
             </div>
             <div className="content text-center">
                 <div className="list-item py-2 my-2">

@@ -20,12 +20,14 @@ const ADD_PORTFOLIO = gql`
 
 const AddPortfolio = () => {
 
-  const [id, setId] = useState(1);
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [img, setImg] = useState('')
   const [linkDemo, setLinkDemo] = useState('')
   const [linkGithub, setLinkGithub] = useState('')
+
+  const [titleError, setTitleError] = useState('')
+  const [imgError, setImgError] = useState('')
 
   //state untuk upload file firebase
   const [fileImg, setFileImg] = useState('')
@@ -42,20 +44,13 @@ const AddPortfolio = () => {
 
     event.preventDefault();
 
-    //set id increment
-    setId (id + 1)
-
     //call handle upload file
     handleUploadFile();
+    
 
   };
 
   const handleUploadFile = () => {
-
-      //cek inputan file image
-      if (!fileImg) {
-        alert("Please upload an image!")
-      }
 
         // handle file ref
         const storageRef = ref(storage, `/files/${fileImg.name}`)
@@ -93,7 +88,6 @@ const AddPortfolio = () => {
                 insertPortfolio({
                   variables: {
                     object: {
-                      id: id,
                       title: title,
                       description: description,
                       linkDemo: linkDemo,

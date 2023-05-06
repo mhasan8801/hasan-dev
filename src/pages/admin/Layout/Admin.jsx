@@ -21,7 +21,7 @@ const AdminPanel = () => {
               <Route path="/" element={<Dashboard />}/>
               <Route path="portofolio" element={<PortfolioAdmin/>}/>
               <Route path="portofolio/add" element={<AddPortfolio/>}/>
-              <Route path="portofolio/edit" element={<EditPortfolio/>}/>
+              <Route path="portofolio/edit/:id" element={<EditPortfolio/>}/>
             </Routes>
           </div>
         </div>

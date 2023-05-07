@@ -19,7 +19,7 @@ const Service = () => {
         </div>
         <div className="row" id={styles.row}>
             {dataServices.map((service, index) => 
-              <div className="col-sm-4">
+              <div className="col-sm-4" key={index}>
                 <CardService
                 img={service.img}
                 title={service.title}

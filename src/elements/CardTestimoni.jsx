@@ -10,7 +10,7 @@ const CardTestimoni = ({ name, job, testimoni }) => {
         backgroundColor: "transparent",
         borderColor: `${Color.button}`,
         borderRadius: "20px",
-        margin: "1rem 0",
+        margin: "1rem 0.5rem",
       }}
     >
       <div className="card-body">

@@ -8,33 +8,6 @@ import { gql, useQuery } from "@apollo/client";
 import { useState } from "react";
 import { useEffect } from "react";
 
-let dataPortfolio = [
-  {
-    img: ImgPortfolio,
-    title: "Find House App",
-    description:
-      "Aplikasi pencarian properti yang memudahkan pengguna untuk menemukan rumah, apartemen, atau properti lainnya sesuai dengan kebutuhan dan preferensi mereka",
-    linkDemo: "https://www.homes.com/",
-    linkGithub: "https://github.com/mhasan8801/hasan-dev/",
-  },
-  {
-    img: ImgPortfolio,
-    title: "Find Car App",
-    description:
-      "Aplikasi pencarian Mobil yang memudahkan pengguna untuk menemukan Mobil, bengkel, atau properti lainnya sesuai dengan kebutuhan dan preferensi mereka",
-    linkDemo: "https://www.cars.com/",
-    linkGithub: "https://github.com/mhasan8801/hasan-dev/",
-  },
-  {
-    img: ImgPortfolio,
-    title: "Find Tour App",
-    description:
-      "Aplikasi pencarian Wisata yang memudahkan pengguna untuk menemukan tempat wisata, apartemen, atau properti lainnya sesuai dengan kebutuhan dan preferensi mereka",
-    linkDemo: "https://www.blibli.com/",
-    linkGithub: "https://github.com/mhasan8801/hasan-dev/",
-  },
-];
-
 //query graphql
 export const getPortfolioList = gql`
   query QueryPortfolio {

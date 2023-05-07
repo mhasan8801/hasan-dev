@@ -7,7 +7,6 @@ const Input = ({type, label, id, placeholder, value, onChangeText}) => {
     <Paragraph>{label}</Paragraph>
     <input
       type={type}
-      name={label}
       id={id ? id : ''}
       placeholder={placeholder ? placeholder : ''}
       style={{margin:'0.5rem 0'}}

@@ -6,8 +6,40 @@ import Button from "../../elements/Button";
 import Email from "../../assets/icons/email.png";
 import Address from "../../assets/icons/address.png";
 import Phone from "../../assets/icons/phone.png";
+import emailJs from "@emailjs/browser";
+import { useRef } from "react";
+import { useState } from "react";
 
 const Contact = () => {
+
+  const [isSend, setIsSend] = useState(false)
+
+  const form = useRef();
+
+  const handleSend = (e) => {
+    e.preventDefault();
+
+    emailJs
+      .sendForm(
+        "service_hyshrce",
+        "template_mituh62",
+        form.current,
+        "5OM9Ey0HYI2WbMWdc"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSend(true);
+          setTimeout(() => setIsSend(false), 3000)
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+      e.target.reset();
+  };
+
   return (
     <div className={styles.contact} id="contact">
       <div className="container">
@@ -48,16 +80,28 @@ const Contact = () => {
           </div>
           <div className="col-md-6">
             <div className="col-md-7">
-              <Input type="text" placeholder="Nama Lengkap*" />
-              <Input type="email" placeholder="Email*" />
-              <Input type="text" placeholder="Pekerjaan*" />
-              <textarea
-                className="form-control"
-                placeholder="Pesan*"
-                id="floatingTextarea"
-                style={{height:'10rem'}}
-              ></textarea>
-              <Button $primary>Submit</Button>
+              <form action="" ref={form} onSubmit={handleSend}>
+                <div className="my-3">
+                  <input type="text" className="form-control" placeholder="Nama Lengkap*" name="user_name"/>
+                </div>
+                <div className="my-3">
+                  <input type="text" className="form-control" placeholder="Email*" name="user_email"/>
+                </div>
+                <div className="my-3">
+                  <input type="text" className="form-control" placeholder="Pekerjaan*" name="user_job"/>
+                </div>
+                <textarea
+                  className="form-control my-3"
+                  name="message"
+                  placeholder="Pesan*"
+                  id="floatingTextarea"
+                  style={{ height: "10rem" }}
+                ></textarea>
+                {isSend && <p style={{color:'green'}}>Pesan Terkirim!</p>}
+                <Button $primary value="Send">
+                  Submit
+                </Button>
+              </form>
             </div>
           </div>
         </div>

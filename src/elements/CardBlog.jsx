@@ -1,7 +1,9 @@
+import Popup from "reactjs-popup";
 import Paragraph from "./Paragraph";
 import Title from "./Title";
+import Button from "./Button";
 
-const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
+const CardBlog = ({ img, title, tanggal, artikel }) => {
   return (
     <div
       className="card shadow"
@@ -13,13 +15,10 @@ const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
         alt={title}
       />
       <div className="card-body" style={{ padding: "1rem 0.5rem" }}>
-        <div>
-        <Paragraph $p2 className="text-start">{kategory}</Paragraph>
-        <Paragraph $p2 className="float-end">{tanggal}</Paragraph>
-        </div>
-        <Title $h3 className="card-title">
+        <Title $h3>
           {title}
         </Title>
+        <Paragraph $p3>{tanggal}</Paragraph>
         <Paragraph
           $p3
           className="card-text"
@@ -28,9 +27,19 @@ const CardBlog = ({ img, title, kategory, tanggal, artikel, linkMore }) => {
           {artikel}
         </Paragraph>{" "}
         <br />
-        <a href={linkMore} className="card-link" style={{ textDecoration: "none" }}>
-          Baca Selengkapnya
-        </a>
+        <Popup
+        modal
+        trigger={<Button style={{margin:"0"}}>Baca Selengkapnya</Button>}
+        position={"center center"}
+        >
+          <div style={{ overflowY: "auto", maxHeight: "85vh" }}>
+            <br />
+            <Title $h3>{title}</Title>
+            <Paragraph $p3>{tanggal}</Paragraph> <br />
+            <Paragraph $p2>{artikel}</Paragraph>
+          </div>
+          <br />
+        </Popup>
       </div>
     </div>
   );

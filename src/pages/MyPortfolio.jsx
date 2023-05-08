@@ -46,14 +46,6 @@ const MyPortfolio = () => {
       <div className="container">
         <div className="header text-center pt-4">
           <Title $h2>Portofolio Sukses Saya</Title>
-          <div className="row">
-            <div className="col">
-              <a href="#" style={styles.a}><TextColor $light>All</TextColor></a>
-              <a href="#" style={styles.a}><Paragraph $p2>Website</Paragraph></a>
-              <a href="#" style={styles.a}><Paragraph $p2> Mobile</Paragraph></a>
-              <a href="#" style={styles.a}><Paragraph $p2>Desktop</Paragraph></a>
-            </div>
-          </div>
         </div>
         <div className="content">
           <div className="row">

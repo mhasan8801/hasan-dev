@@ -26,9 +26,6 @@ const AddPortfolio = () => {
   const [linkDemo, setLinkDemo] = useState('')
   const [linkGithub, setLinkGithub] = useState('')
 
-  const [titleError, setTitleError] = useState('')
-  const [imgError, setImgError] = useState('')
-
   //state untuk upload file firebase
   const [fileImg, setFileImg] = useState('')
 

@@ -13,8 +13,7 @@ const CardService = ({ img, title, description, skills }) => {
       style={{
         backgroundColor: "transparent",
         border: "none",
-        padding: "2rem 1rem",
-        margin: "1rem 0",
+        padding: "2rem 1rem 1rem",
       }}
     >
       <img
@@ -44,7 +43,7 @@ const CardService = ({ img, title, description, skills }) => {
         <div>
           <Popup
             modal
-            trigger={<Button>Baca Selengkapnya</Button>}
+            trigger={<Button style={{margin:"0"}}>Baca Selengkapnya</Button>}
             position="center center"
           >
             <div className="text-center">

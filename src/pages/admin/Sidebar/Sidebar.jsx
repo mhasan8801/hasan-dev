@@ -1,5 +1,5 @@
 import Logo from "../../../elements/Logo";
-import { MdSpaceDashboard,MdLogout } from 'react-icons/md';
+import { MdSpaceDashboard,MdLogout,MdArticle } from 'react-icons/md';
 import Paragraph from "../../../elements/Paragraph";
 import styles from "./Sidebar.module.css";
 import { Link, Outlet } from "react-router-dom";
@@ -23,6 +23,11 @@ const Sidebar = () => {
                     <div className="my-3">
                         <Link to="/admin/portofolio" className={styles.item}>
                             <Paragraph $textColor><AiOutlineFundProjectionScreen />Portofolio</Paragraph>
+                        </Link>
+                    </div>
+                    <div className="my-3">
+                        <Link to="/admin/blog" className={styles.item}>
+                            <Paragraph $textColor><MdArticle/>My Blog</Paragraph>
                         </Link>
                     </div>
                     <div className="my-3 ms-auto">

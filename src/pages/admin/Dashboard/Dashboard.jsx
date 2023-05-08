@@ -8,10 +8,16 @@ const Dashboard = () => {
             <div className="container-fluid">
                 <div className="row g-3 my-1">
                     <div className="col-md-2">
-                        <div className="p-3 bg-white shadow d-flex justify-content-around align-items-center rounded">
+                        <div className="my-3 bg-white shadow d-flex justify-content-around align-items-center rounded">
                             <div className="content text-center">
                                 <TextColor $h3>12</TextColor>
                                 <Title $h3>Portofolio</Title>
+                            </div>
+                        </div>
+                        <div className="my-3 bg-white shadow d-flex justify-content-around align-items-center rounded">
+                            <div className="content text-center">
+                                <TextColor $h3>12</TextColor>
+                                <Title $h3>Blog</Title>
                             </div>
                         </div>
                     </div>

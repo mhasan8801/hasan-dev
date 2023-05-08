@@ -46,6 +46,13 @@ const EditPortfolio = () => {
     const [linkDemo, setLinkDemo] = useState('')
     const [linkGithub, setLinkGithub] = useState('')
 
+    useEffect(() => {
+        setTitle(data?.portfolio[0].title)
+        setDescription(data?.portfolio[0].description)
+        setLinkDemo(data?.portfolio[0].linkDemo)
+        setLinkGithub(data?.portfolio[0].linkGithub)
+    }, [loading])
+
     const handleUpdate = () => {
         const confirmUpdate = window.confirm('Apakah anda yakin ingin mengubah ?')
 
@@ -74,13 +81,13 @@ const EditPortfolio = () => {
                 value={title}
                 onChangeText={(e) => setTitle(e.target.value)}
                 />
-                {/* <img src={data?.portfolio[0].img} alt="Link Image Firebase" /> */}
+                <img src={data?.portfolio[0].img} alt="Link Image Firebase" />
                 <Input
                 label="Gambar"
                 type="file"
                 placeholder="Gambar Portofolio"
                 value={img}
-                onChangeText={(e) => setFileImg(e.target.files[0])}
+                onChangeText={(e) => setImg(e.target.files[0])}
                 />
                 <Input
                 label="Deskripsi"

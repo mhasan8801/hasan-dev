@@ -61,13 +61,14 @@ const Portfolio = () => {
             {loading ? (
               <p>Loading</p>
             ) : (
-              data?.portfolio.map((item) => (
+              data?.portfolio.slice(0,3).map((item) => (
                   <div className="col-md-4" key={item.id}>
                     <CardMyPortfolio
                       img={item.img}
                       title={item.title}
                       description={item.description}
                       linkDemo={item.linkDemo}
+                      
                       linkGithub={item.linkGithub}
                     />
                   </div>

@@ -1,0 +1,17 @@
+.login {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+}
+
+.content{
+    width: 30%;
+    height: 30%;
+    background-color: #fff;
+}
+
+.cardlogin {
+    padding: 1rem;
+}

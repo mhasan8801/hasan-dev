@@ -1,7 +1,6 @@
 import Title from "../../elements/Title";
 import Paragraph from "../../elements/Paragraph";
 import styles from "./Contact.module.css";
-import Input from "../../elements/Input";
 import Button from "../../elements/Button";
 import Email from "../../assets/icons/email.png";
 import Address from "../../assets/icons/address.png";
@@ -11,8 +10,7 @@ import { useRef } from "react";
 import { useState } from "react";
 
 const Contact = () => {
-
-  const [isSend, setIsSend] = useState(false)
+  const [isSend, setIsSend] = useState(false);
 
   const form = useRef();
 
@@ -30,14 +28,14 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           setIsSend(true);
-          setTimeout(() => setIsSend(false), 3000)
+          setTimeout(() => setIsSend(false), 3000);
         },
         (error) => {
           console.log(error.text);
         }
       );
 
-      e.target.reset();
+    e.target.reset();
   };
 
   return (
@@ -82,13 +80,28 @@ const Contact = () => {
             <div className="col-md-7">
               <form action="" ref={form} onSubmit={handleSend}>
                 <div className="my-3">
-                  <input type="text" className="form-control" placeholder="Nama Lengkap*" name="user_name"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Nama Lengkap*"
+                    name="user_name"
+                  />
                 </div>
                 <div className="my-3">
-                  <input type="text" className="form-control" placeholder="Email*" name="user_email"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email*"
+                    name="user_email"
+                  />
                 </div>
                 <div className="my-3">
-                  <input type="text" className="form-control" placeholder="Pekerjaan*" name="user_job"/>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Pekerjaan*"
+                    name="user_job"
+                  />
                 </div>
                 <textarea
                   className="form-control my-3"
@@ -97,7 +110,7 @@ const Contact = () => {
                   id="floatingTextarea"
                   style={{ height: "10rem" }}
                 ></textarea>
-                {isSend && <p style={{color:'green'}}>Pesan Terkirim!</p>}
+                {isSend && <p style={{ color: "green" }}>Pesan Terkirim!</p>}
                 <Button $primary value="Send">
                   Submit
                 </Button>

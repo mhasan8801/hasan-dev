@@ -4,7 +4,6 @@ import ImageBlog from "../../assets/images/blog.png";
 import CardBlog from "../../elements/CardBlog";
 import TextColor from "../../elements/TextColor";
 import { gql, useQuery } from "@apollo/client";
-import { getBlogList } from "../../pages/MyBlog/MyBlog";
 import { useState } from "react";
 import { useEffect } from "react";
 

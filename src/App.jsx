@@ -7,9 +7,6 @@ import MyBlog from './pages/MyBlog/MyBlog'
 import CurciulumVitae from './pages/CuriculumVitae'
 import { Route, Routes } from 'react-router-dom'
 import AdminPanel from './pages/admin/Layout/Admin'
-import Dashboard from './pages/admin/Dashboard/Dashboard'
-import Portfolio from './components/Portfolio/Portfolio'
-import PortfolioAdmin from './pages/admin/PortfolioAdmin/PortfolioAdmin'
 import Login from './pages/admin/Login/Login'
 
 function App() {

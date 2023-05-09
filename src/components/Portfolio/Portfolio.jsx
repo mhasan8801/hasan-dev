@@ -9,21 +9,23 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 //query graphql
-export const getPortfolioList = gql`
-  query QueryPortfolio {
-    portfolio {
+export const getLastPortfolio = gql`
+query PickPortfolio3 {
+  portfolio_aggregate(limit: 3, order_by: { id: desc }) {
+    nodes {
       id
       title
-      img
       description
+      img
       linkDemo
       linkGithub
     }
   }
+}
 `;
 
 const Portfolio = () => {
-  const { data, loading, error } = useQuery(getPortfolioList);
+  const { data, loading, error } = useQuery(getLastPortfolio);
   const [listPortfolio, setListPortfolio] = useState([]);
 
   useEffect(() => {
@@ -32,11 +34,11 @@ const Portfolio = () => {
     console.log("error : ", error); //cek jika ada error
 
     // mengecek proses fetch data
-    if (!loading && error !== undefined) {
+    if (!loading && error === undefined) {
       
       setListPortfolio(data.portfolio); //set data ke usestate
     }
-  });
+  }, [loading, data, error]);
 
   return (
     <div className={styles.portfolio}>
@@ -61,7 +63,7 @@ const Portfolio = () => {
             {loading ? (
               <p>Loading</p>
             ) : (
-              data?.portfolio.slice(0,3).map((item) => (
+              data?.portfolio_aggregate.nodes?.map((item) => (
                   <div className="col-md-4" key={item.id}>
                     <CardMyPortfolio
                       img={item.img}

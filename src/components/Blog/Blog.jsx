@@ -3,14 +3,27 @@ import Title from "../../elements/Title.jsx";
 import ImageBlog from "../../assets/images/blog.png";
 import CardBlog from "../../elements/CardBlog";
 import TextColor from "../../elements/TextColor";
-import { useQuery } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { getBlogList } from "../../pages/MyBlog/MyBlog";
 import { useState } from "react";
 import { useEffect } from "react";
 
+const getLastBlog = gql`
+query PickBlog3 {
+  blog_aggregate(limit: 3, order_by: {id: desc}) {
+    nodes {
+      id
+      title
+      date
+      article
+    }
+  }
+}
+`
+
 const Blog = () => {
 
-  const { data, loading, error } = useQuery(getBlogList);
+  const { data, loading, error } = useQuery(getLastBlog);
   const [listBlog, setlistBlog] = useState([]);
 
   useEffect(() => {
@@ -36,7 +49,7 @@ const Blog = () => {
           {loading? (
               <p>loading</p>
             ) : (
-              data?.blog.map((blog) =>(
+              data?.blog_aggregate.nodes?.map((blog) =>(
                 <div className="col-md-4" key={blog.id}>
                   <CardBlog
                   img={ImageBlog}

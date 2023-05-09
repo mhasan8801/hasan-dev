@@ -6,6 +6,7 @@ import { getPortfolioList } from "./PortfolioAdmin";
 import { useState } from "react";
 import { storage } from "../../../config/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from "firebase/storage";
+import { useNavigate } from "react-router-dom";
 
 // mutation untuk add portfolio baru
 const ADD_PORTFOLIO = gql`
@@ -25,6 +26,8 @@ const AddPortfolio = () => {
   const [img, setImg] = useState('')
   const [linkDemo, setLinkDemo] = useState('')
   const [linkGithub, setLinkGithub] = useState('')
+
+  const navigate = useNavigate()
 
   //state untuk upload file firebase
   const [fileImg, setFileImg] = useState('')
@@ -92,7 +95,10 @@ const AddPortfolio = () => {
                       img: url
                     },
                   },
-                });
+                }).then(() => {
+                  alert('Portofolio berhasil ditambahkan')
+                  navigate(-1);
+                })
               })
           }
         )    

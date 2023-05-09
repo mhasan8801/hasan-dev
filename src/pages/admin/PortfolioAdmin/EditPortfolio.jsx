@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Button from "../../../elements/Button";
 import Input from "../../../elements/Input";
 import Title from "../../../elements/Title";
@@ -45,6 +45,8 @@ const EditPortfolio = () => {
     const [img, setImg] = useState('')
     const [linkDemo, setLinkDemo] = useState('')
     const [linkGithub, setLinkGithub] = useState('')
+    
+    const navigate = useNavigate()
 
     useEffect(() => {
         setTitle(data?.portfolio[0].title)
@@ -66,7 +68,10 @@ const EditPortfolio = () => {
                     linkDemo: linkDemo,
                     linkGithub: linkGithub,
                 }
-            })
+            }).then(() => {
+                alert('Portofolio berhasil ditambahkan')
+                navigate(-1);
+              })
         }
     }
 
@@ -81,7 +86,6 @@ const EditPortfolio = () => {
                 value={title}
                 onChangeText={(e) => setTitle(e.target.value)}
                 />
-                <img src={data?.portfolio[0].img} alt="Link Image Firebase" />
                 <Input
                 label="Gambar"
                 type="file"

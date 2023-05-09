@@ -6,6 +6,7 @@ import { getBlogList } from "./BlogAdmin";
 import { gql, useMutation } from "@apollo/client";
 import axios from "axios";
 import { Configuration, OpenAIApi } from "openai";
+import { useNavigate } from "react-router-dom";
 
 // mutation untuk add blog baru
 const ADD_BLOG = gql`
@@ -25,6 +26,8 @@ const AddBlog = () => {
     const [date, setDate] = useState('')
     const [article, setArticle] = useState('')
 
+    const navigate = useNavigate()
+
     //mutation untuk manggil query
     const [insertBlog] = useMutation(ADD_BLOG, {
         refetchQueries: [getBlogList],
@@ -43,7 +46,10 @@ const AddBlog = () => {
                 article: article,
               },
             },
-          });
+          }).then(() => {
+            alert('Blog berhasil ditambahkan')
+            navigate(-1);
+          })
       };
 
     return(

@@ -3,8 +3,41 @@ import Title from "../../elements/Title.jsx";
 import ImageBlog from "../../assets/images/blog.png";
 import CardBlog from "../../elements/CardBlog";
 import TextColor from "../../elements/TextColor";
+import { gql, useQuery } from "@apollo/client";
+import { getBlogList } from "../../pages/MyBlog/MyBlog";
+import { useState } from "react";
+import { useEffect } from "react";
+
+const getLastBlog = gql`
+query PickBlog3 {
+  blog_aggregate(limit: 3, order_by: {id: desc}) {
+    nodes {
+      id
+      title
+      date
+      article
+    }
+  }
+}
+`
 
 const Blog = () => {
+
+  const { data, loading, error } = useQuery(getLastBlog);
+  const [listBlog, setlistBlog] = useState([]);
+
+  useEffect(() => {
+    console.log("loading ", loading); //cek fetch data masih berlangsung/selesai
+    console.log("data gql : ", data); //cek fetch data yang diminta
+    console.log("error : ", error); //cek jika ada error
+
+    // mengecek proses fetch data
+    if (!loading && error !== undefined) {
+      
+      setlistBlog(data.blog); //set data ke usestate
+    }
+  });
+
   return (
     <div className={styles.blog}>
       <div className="container">
@@ -13,36 +46,20 @@ const Blog = () => {
             <Title $h3>Artikel <TextColor>Terakhir</TextColor></Title>
         </div>
         <div className="row" id={styles.row}>
-            <div className="col-md-4">
-                <CardBlog
-                img={ImageBlog}
-                title="Web Design"
-                kategory="Teknologi"
-                tanggal="29 Maret 2023"
-                artikel="Perkembangan teknologi yang semakin pesat memberikan dampak besar pada kehidupan kita. Dengan teknologi, kita bisa mengakses informasi dengan mudah, berkomunikasi dengan orang yang berada di tempat yang jauh, serta melakukan pekerjaan dengan lebih efisien dan cepat."
-                linkMore="#"
-                />
-            </div>
-            <div className="col-md-4">
-            <CardBlog
-                img={ImageBlog}
-                title="Web Design"
-                kategory="Teknologi"
-                tanggal="29 Maret 2023"
-                artikel="Perkembangan teknologi yang semakin pesat memberikan dampak besar pada kehidupan kita. Dengan teknologi, kita bisa mengakses informasi dengan mudah, berkomunikasi dengan orang yang berada di tempat yang jauh, serta melakukan pekerjaan dengan lebih efisien dan cepat."
-                linkMore="#"
-                />
-            </div>
-            <div className="col-md-4">
-            <CardBlog
-                img={ImageBlog}
-                title="Web Design"
-                kategory="Teknologi"
-                tanggal="29 Maret 2023"
-                artikel="Perkembangan teknologi yang semakin pesat memberikan dampak besar pada kehidupan kita. Dengan teknologi, kita bisa mengakses informasi dengan mudah, berkomunikasi dengan orang yang berada di tempat yang jauh, serta melakukan pekerjaan dengan lebih efisien dan cepat."
-                linkMore="#"
-                />
-            </div>
+          {loading? (
+              <p>loading</p>
+            ) : (
+              data?.blog_aggregate.nodes?.map((blog) =>(
+                <div className="col-md-4" key={blog.id}>
+                  <CardBlog
+                  img={ImageBlog}
+                  title={blog.title}
+                  tanggal={blog.date}
+                  artikel={blog.article}
+                  />
+              </div>
+              ))
+            )}
         </div>
       </div>
     </div>

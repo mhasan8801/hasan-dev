@@ -16,17 +16,21 @@ const CardMyPortfolio = ({ img, title, description, linkDemo, linkGithub }) => {
         </Paragraph>{" "}
         <br />
         <a
-          href={linkDemo}
+          href={`https://${linkDemo}`}
           className="card-link text-start"
           style={{ textDecoration: "none" }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {" "}
           <TextColor $light>Demo Langsung</TextColor>{" "}
         </a>
         <a
-          href={linkGithub}
+          href={`https://${linkGithub}`}
           className="card-link float-end"
           style={{ textDecoration: "none" }}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <TextColor $light>Lihat di Github</TextColor>
         </a>

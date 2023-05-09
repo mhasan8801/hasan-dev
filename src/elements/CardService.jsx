@@ -3,16 +3,17 @@ import 'reactjs-popup/dist/index.css';
 import Paragraph from "./Paragraph";
 import Title from "./Title";
 import Button from "../elements/Button";
+import { useState } from "react";
 
-const CardService = ({ img, title, description, linkMore, onClick }) => {
+const CardService = ({ img, title, description, skills }) => {
+
   return (
     <div
       className="card shadow"
       style={{
         backgroundColor: "transparent",
         border: "none",
-        padding: "2rem 1rem",
-        margin: "1rem 0",
+        padding: "2rem 1rem 1rem",
       }}
     >
       <img
@@ -39,14 +40,23 @@ const CardService = ({ img, title, description, linkMore, onClick }) => {
           {description}
         </Paragraph>{" "}
         <br />
-        <div className={styles.popup}>
+        <div>
           <Popup
             modal
-            trigger={<Button>Baca Selengkapnya</Button>}
+            trigger={<Button style={{margin:"0"}}>Baca Selengkapnya</Button>}
             position="center center"
           >
-            <Title $h3>{title}</Title>
-            <Paragraph $p3>{description}</Paragraph>
+            <div className="text-center">
+              <br />
+              <Title $h3>{title}</Title>
+              <Paragraph $p2>{description}</Paragraph>
+            </div> <br />
+              <ul>
+                {Object.values(skills).map((skill, index) => (
+                  <li key={index}><Paragraph $p3>{skill}</Paragraph></li>
+                ))}
+              </ul>
+            <br />
           </Popup>
         </div>
       </div>
@@ -56,7 +66,7 @@ const CardService = ({ img, title, description, linkMore, onClick }) => {
 
 const styles = {
   popup: {
-    backgroundColor: "red",
+    padding: '2rem 0'
   },
 };
 

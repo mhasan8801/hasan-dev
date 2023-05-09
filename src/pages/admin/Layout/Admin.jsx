@@ -4,6 +4,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import PortfolioAdmin from "../PortfolioAdmin/PortfolioAdmin";
 import AddPortfolio from "../PortfolioAdmin/AddPortfolio";
 import EditPortfolio from "../PortfolioAdmin/EditPortfolio";
+import BlogAdmin from "../../MyBlog/BlogAdmin";
+import AddBlog from "../../MyBlog/AddBlog";
 
 const AdminPanel = () => {
   return (
@@ -11,8 +13,7 @@ const AdminPanel = () => {
       <div className="container-fluid bg-width min-vh-100">
         <div className="row">
           <div
-            className="col-2 vh-100"
-            style={{ backgroundColor: "var(--background)" }}
+            className="col-2"
           >
             <Sidebar />
           </div>
@@ -21,7 +22,9 @@ const AdminPanel = () => {
               <Route path="/" element={<Dashboard />}/>
               <Route path="portofolio" element={<PortfolioAdmin/>}/>
               <Route path="portofolio/add" element={<AddPortfolio/>}/>
-              <Route path="portofolio/edit" element={<EditPortfolio/>}/>
+              <Route path="portofolio/edit/:id" element={<EditPortfolio/>}/>
+              <Route path="blog" element={<BlogAdmin/>}/>
+              <Route path="blog/add" element={<AddBlog/>}/>
             </Routes>
           </div>
         </div>

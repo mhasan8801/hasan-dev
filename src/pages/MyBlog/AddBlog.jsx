@@ -4,8 +4,6 @@ import Input from "../../elements/Input";
 import Button from "../../elements/Button";
 import { getBlogList } from "./BlogAdmin";
 import { gql, useMutation } from "@apollo/client";
-import axios from "axios";
-import { Configuration, OpenAIApi } from "openai";
 import { useNavigate } from "react-router-dom";
 
 // mutation untuk add blog baru

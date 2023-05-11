@@ -1,6 +1,6 @@
 {
     "routes": [
-      { "src": "/login", "dest": "/app.jsx" }
+      { "src": "/login", "dest": "/Login.jsx" }
     ]
   }
   

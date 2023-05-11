@@ -1,6 +1,6 @@
 import styles from "./Blog.module.css";
 import Title from "../../elements/Title.jsx";
-import ImageBlog from "../../assets/images/blog.png";
+import ImageBlog from "../../assets/blogg.png";
 import CardBlog from "../../elements/CardBlog";
 import TextColor from "../../elements/TextColor";
 import { gql, useQuery } from "@apollo/client";

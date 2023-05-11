@@ -69,7 +69,7 @@ const EditPortfolio = () => {
                     linkGithub: linkGithub,
                 }
             }).then(() => {
-                alert('Portofolio berhasil ditambahkan')
+                alert('Portofolio berhasil diedit')
                 navigate(-1);
               })
         }

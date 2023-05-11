@@ -45,7 +45,7 @@ const AddBlog = () => {
               },
             },
           }).then(() => {
-            alert('Blog berhasil ditambahkan')
+            alert('Artikel berhasil ditambahkan')
             navigate(-1);
           })
       };

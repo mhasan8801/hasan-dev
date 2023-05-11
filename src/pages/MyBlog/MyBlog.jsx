@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Title from "../../elements/Title";
-import ImageBlog from "../../assets/images/blog.png";
+import ImageBlog from "../../assets/images/blogg.png";
 import CardBlog from "../../elements/CardBlog";
 import { gql, useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
